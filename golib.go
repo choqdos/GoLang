@@ -27,3 +27,7 @@ func Hangul(str string) string { //콘솔에 출력시 한글깨짐 방지를 �
 	out, _ := iconv.ConvertString(string(str), "euc-kr", "utf-8")
 	return out
 }
+
+func setFyneHangul() {
+	os.Setenv("FYNE_FONT", "NanumGothic.ttf") // Fyne에서 한글 깨짐을 방지 한다.
+}
